@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="POST" action="/real">
+        <div><label>gender: <input type="text" name="gender"></label></div>
+        <div><label>age: <input type="number" min=6 name="age"></label></div>
+        <div><label>genare: <select name="genare">
+            <option value="HipHop">HipHop</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Classical">Classical</option>
+            <option value="Dance">Dance</option>
+            <option value="Acoustic">Acoustic</option>
+        </select></label></div>
+        <input type="submit" value="Submit">
+    </form>
+    genare Prediction : {{msg}}
+    {% endblock %}
+
+
