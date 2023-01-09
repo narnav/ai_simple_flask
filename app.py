@@ -33,7 +33,8 @@ def learn():
     model = DecisionTreeClassifier()
     model.fit(X,Y) # load features and sample data
     joblib.dump(model, 'our_pridction.joblib') #binary file
-    return "i learned"
+    msg ="Thank you - now i'm smarter!!!"
+    return render_template("smart.html",msg=msg)
 
 @app.route("/real", methods=['GET', 'POST'])
 def realgenare():
